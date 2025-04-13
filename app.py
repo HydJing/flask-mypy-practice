@@ -1,14 +1,6 @@
-from typing import Dict
+from app import create_app
 
-from flask import Flask, jsonify
-
-app: Flask = Flask(__name__)
-
-
-@app.route("/")
-def hello_world() -> Dict[str, str]:
-    return {"message": "Hello, world!"}
-
+app = create_app()
 
 if __name__ == "__main__":
     app.run(debug=True)
